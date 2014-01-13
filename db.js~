@@ -1,0 +1,9 @@
+var databaseURI = "localhost:27017/events-db";
+var collections = ["users", "events"];
+var db = require("mongojs").connect(databaseURI, collections);
+
+module.exports = db;
+
+and then just require it where you need to connect to mongo like:
+
+var db = require("./db");
